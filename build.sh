@@ -21,6 +21,9 @@ if [ "${UPLOAD_TO_PLAY_STORE}" = "true" ]; then
         echo "Missing json-key-data"
         exit 6
     fi
+    elif [ -z "${KEY_PASSWORD}" ]; then
+        echo "Missing key-password"
+        exit 7
 fi
 
 export PLAY_STORE_JSON_KEY_DATA=${JSON_KEY_DATA}

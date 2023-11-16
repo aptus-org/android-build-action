@@ -27,6 +27,9 @@ inputs:
   keystore-password:
     description: "Keystore password"
     required: false
+  key-password:
+    description: "Key password"
+    required: false
   keystore-alias:
     description: "Keystore alias"
     required: false
@@ -99,6 +102,7 @@ runs:
         PACKAGE_NAME: ${{ inputs.package-name }}
         KEYSTORE_CONTENT: ${{ inputs.keystore-content }}
         KEYSTORE_PASSWORD: ${{ inputs.keystore-password }}
+        KEY_PASSWORD: ${{ inputs.key-password }}
         KEYSTORE_ALIAS: ${{ inputs.keystore-alias }}
         JSON_KEY_DATA: ${{ inputs.json-key-data }}
         UPLOAD_TO_PLAY_STORE: ${{ inputs.upload-to-play-store }}

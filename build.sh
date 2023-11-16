@@ -32,7 +32,7 @@ OUTPUT_PATH="${PWD}/${OUTPUT_PATH}"
 # If the variable KEYSTORE_CONTENT is set, then the keystore is created from the content of the variable.
 if [ -n "${KEYSTORE_CONTENT}" ]; then
     echo "Creating keystore from content"
-    echo $KEYSTORE_CONTENT | base64 --decode > "keystore.jks"
+    echo $KEYSTORE_CONTENT > "keystore.jks"
 fi
 
 cp -r ${ACTION_PATH}/fastlane ./
